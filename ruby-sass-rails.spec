@@ -2,7 +2,7 @@
 Summary:	Sass adapter for the Rails asset pipeline
 Name:		ruby-%{pkgname}
 Version:	3.2.6
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/gems/%{pkgname}-%{version}.gem
@@ -12,7 +12,8 @@ BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
 Requires:	ruby-railties
 Requires:	ruby-sass
-Requires:	ruby-tilt
+Requires:	ruby-tilt >= 1.3
+Conflicts:	ruby-tilt >= 2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
