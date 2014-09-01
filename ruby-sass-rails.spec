@@ -2,12 +2,12 @@
 Summary:	Sass adapter for the Rails asset pipeline
 Name:		ruby-%{pkgname}
 Version:	3.2.6
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/gems/%{pkgname}-%{version}.gem
 # Source0-md5:	b81ae64fa2d1c593d894cbeebbe4e017
-URL:		http://github.com/rtomayko/%{pkgname}
+URL:		http://github.com/rtomayko/sass-rails
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
 Requires:	ruby-railties
@@ -78,13 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 %{ruby_vendorlibdir}/sass/rails
 %{ruby_vendorlibdir}/sass/rails.rb
 %{ruby_vendorlibdir}/sass-rails.rb
-#/usr/share/ruby/vendor_ruby/rails/generators/sass/assets/assets_generator.rb
-#/usr/share/ruby/vendor_ruby/rails/generators/sass/assets/templates/stylesheet.css.sass
-#/usr/share/ruby/vendor_ruby/rails/generators/sass/scaffold/scaffold_generator.rb
-#/usr/share/ruby/vendor_ruby/rails/generators/sass_scaffold.rb
-#/usr/share/ruby/vendor_ruby/rails/generators/scss/assets/assets_generator.rb
-#/usr/share/ruby/vendor_ruby/rails/generators/scss/assets/templates/stylesheet.css.scss
-#/usr/share/ruby/vendor_ruby/rails/generators/scss/scaffold/scaffold_generator.rb
+%{ruby_vendorlibdir}/rails/generators/sass
+%{ruby_vendorlibdir}/rails/generators/sass_scaffold.rb
+%{ruby_vendorlibdir}/rails/generators/scss
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
 
 %files rdoc
