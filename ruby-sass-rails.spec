@@ -2,7 +2,7 @@
 Summary:	Sass adapter for the Rails asset pipeline
 Name:		ruby-%{pkgname}
 Version:	3.2.6
-Release:	3
+Release:	4
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/gems/%{pkgname}-%{version}.gem
@@ -58,9 +58,9 @@ rm ri/created.rid
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{ruby_rdocdir}}
+install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_ridir},%{ruby_rdocdir}}
 
-cp -a lib/* $RPM_BUILD_ROOT%{ruby_rubylibdir}
+cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
 
 cp -a ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 install -d $RPM_BUILD_ROOT%{ruby_rdocdir}/%{name}-%{version}
@@ -75,12 +75,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGELOG.md README.markdown
-%{ruby_rubylibdir}/sass/rails
-%{ruby_rubylibdir}/sass/rails.rb
-%{ruby_rubylibdir}/sass-rails.rb
-%{ruby_rubylibdir}/rails/generators/sass
-%{ruby_rubylibdir}/rails/generators/sass_scaffold.rb
-%{ruby_rubylibdir}/rails/generators/scss
+%{ruby_vendorlibdir}/sass/rails
+%{ruby_vendorlibdir}/sass/rails.rb
+%{ruby_vendorlibdir}/sass-rails.rb
+%{ruby_vendorlibdir}/rails/generators/sass
+%{ruby_vendorlibdir}/rails/generators/sass_scaffold.rb
+%{ruby_vendorlibdir}/rails/generators/scss
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
 
 %files rdoc
