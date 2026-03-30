@@ -2,7 +2,7 @@
 Summary:	Sass adapter for the Rails asset pipeline
 Name:		ruby-%{pkgname}
 Version:	3.2.6
-Release:	5
+Release:	6
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/gems/%{pkgname}-%{version}.gem
